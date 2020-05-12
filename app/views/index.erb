@@ -1,0 +1,9 @@
+<ul>
+    <% @recipes.each {|a|  %>
+    <li><h1><a href=<%= "/recipes/#{a.id}" %>><%= a.name %></a></h1></li>
+    <ul>
+        <li><%= a.ingredients %></li>
+        <li><%= a.cook_time %></li>
+    </ul>
+    <% } %>
+</ul>
