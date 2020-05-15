@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipe Page</title>
+    </head>
+    <body>
+        <h1><%= @recipe.name %></h1>
+        <h2><%= @recipe.ingredients %></h2>
+        <h2><%= @recipe.cook_time %></h2>
+        <form action='/recipes/<%=@recipe.id%>' method='post'>
+            <input type='submit' value='delete'>
+            <input type='hidden' value='delete' name='_method'>
+        </form>
+    </body>
+</html>
